@@ -243,12 +243,12 @@ class JobProcessor
         });
     }
 
-    protected function saveJob(Job $job): void
+    protected function saveJob(Job $job)
     {
         $this->jobStorage->saveJob($job);
     }
 
-    protected function sendCalculateRootJobStatusEvent(Job $job): void
+    protected function sendCalculateRootJobStatusEvent(Job $job)
     {
         $this->producer->sendEvent(Topics::CALCULATE_ROOT_JOB_STATUS, [
             'jobId' => $job->getId(),
