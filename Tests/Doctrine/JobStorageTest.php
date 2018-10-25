@@ -38,9 +38,14 @@ class JobStorageTest extends \PHPUnit\Framework\TestCase
 
         $doctrine = $this->createDoctrineMock();
         $doctrine
-            ->expects($this->once())
+            ->expects($this->atMost(2))
             ->method('getManagerForClass')
             ->with('entity-class')
+            ->will($this->returnValue($em))
+        ;
+        $doctrine
+            ->expects($this->atMost(1))
+            ->method('resetManager')
             ->will($this->returnValue($em))
         ;
 
@@ -69,9 +74,14 @@ class JobStorageTest extends \PHPUnit\Framework\TestCase
 
         $doctrine = $this->createDoctrineMock();
         $doctrine
-            ->expects($this->once())
+            ->expects($this->atMost(2))
             ->method('getManagerForClass')
             ->with('entity-class')
+            ->will($this->returnValue($em))
+        ;
+        $doctrine
+            ->expects($this->atMost(1))
+            ->method('resetManager')
             ->will($this->returnValue($em))
         ;
 
@@ -123,9 +133,14 @@ class JobStorageTest extends \PHPUnit\Framework\TestCase
 
         $doctrine = $this->createDoctrineMock();
         $doctrine
-            ->expects($this->once())
+            ->expects($this->atMost(2))
             ->method('getManagerForClass')
             ->with('entity-class')
+            ->will($this->returnValue($em))
+        ;
+        $doctrine
+            ->expects($this->atMost(1))
+            ->method('resetManager')
             ->will($this->returnValue($em))
         ;
 
@@ -168,9 +183,14 @@ class JobStorageTest extends \PHPUnit\Framework\TestCase
 
         $doctrine = $this->createDoctrineMock();
         $doctrine
-            ->expects($this->once())
+            ->expects($this->atMost(2))
             ->method('getManagerForClass')
             ->with('entity-class')
+            ->will($this->returnValue($em))
+        ;
+        $doctrine
+            ->expects($this->atMost(1))
+            ->method('resetManager')
             ->will($this->returnValue($em))
         ;
 
@@ -222,9 +242,14 @@ class JobStorageTest extends \PHPUnit\Framework\TestCase
 
         $doctrine = $this->createDoctrineMock();
         $doctrine
-            ->expects($this->once())
+            ->expects($this->atMost(2))
             ->method('getManagerForClass')
             ->with('entity-class')
+            ->will($this->returnValue($em))
+        ;
+        $doctrine
+            ->expects($this->atMost(1))
+            ->method('resetManager')
             ->will($this->returnValue($em))
         ;
 
@@ -256,9 +281,14 @@ class JobStorageTest extends \PHPUnit\Framework\TestCase
 
         $doctrine = $this->createDoctrineMock();
         $doctrine
-            ->expects($this->once())
+            ->expects($this->atMost(2))
             ->method('getManagerForClass')
             ->with('entity-class')
+            ->will($this->returnValue($em))
+        ;
+        $doctrine
+            ->expects($this->atMost(1))
+            ->method('resetManager')
             ->will($this->returnValue($em))
         ;
 
@@ -309,9 +339,14 @@ class JobStorageTest extends \PHPUnit\Framework\TestCase
 
         $doctrine = $this->createDoctrineMock();
         $doctrine
-            ->expects($this->once())
+            ->expects($this->atMost(2))
             ->method('getManagerForClass')
             ->with('entity-class')
+            ->will($this->returnValue($em))
+        ;
+        $doctrine
+            ->expects($this->atMost(1))
+            ->method('resetManager')
             ->will($this->returnValue($em))
         ;
 
@@ -380,9 +415,14 @@ class JobStorageTest extends \PHPUnit\Framework\TestCase
 
         $doctrine = $this->createDoctrineMock();
         $doctrine
-            ->expects($this->once())
+            ->expects($this->atMost(2))
             ->method('getManagerForClass')
             ->with('entity-class')
+            ->will($this->returnValue($em))
+        ;
+        $doctrine
+            ->expects($this->atMost(1))
+            ->method('resetManager')
             ->will($this->returnValue($em))
         ;
 
@@ -445,9 +485,14 @@ class JobStorageTest extends \PHPUnit\Framework\TestCase
 
         $doctrine = $this->createDoctrineMock();
         $doctrine
-            ->expects($this->once())
+            ->expects($this->atMost(2))
             ->method('getManagerForClass')
             ->with('entity-class')
+            ->will($this->returnValue($em))
+        ;
+        $doctrine
+            ->expects($this->atMost(1))
+            ->method('resetManager')
             ->will($this->returnValue($em))
         ;
 
