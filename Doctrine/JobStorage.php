@@ -212,10 +212,8 @@ class JobStorage
         if (!$this->em) {
             $this->em = $this->doctrine->getManagerForClass($this->entityClass);
         }
-
         if (!$this->em->isOpen()) {
-            $this->doctrine->resetManager();
-            $this->em = $this->doctrine->getManagerForClass($this->entityClass);
+            $this->em = $this->doctrine->resetManager();
         }
 
         return $this->em;
