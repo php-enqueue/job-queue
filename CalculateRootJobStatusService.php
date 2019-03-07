@@ -74,6 +74,7 @@ class CalculateRootJobStatusService
         $success = 0;
 
         foreach ($jobs as $job) {
+            $this->jobStorage->refreshJob($job);
             switch ($job->getStatus()) {
                 case Job::STATUS_NEW:
                     $new++;

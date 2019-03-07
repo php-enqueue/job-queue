@@ -192,6 +192,11 @@ class JobStorage
         }
     }
 
+    public function refreshJob(Job $job)
+    {
+        $this->em->refresh($job);
+    }
+
     /**
      * @return EntityRepository
      */
