@@ -180,9 +180,9 @@ class JobStorage
     }
 
     public function clearJobCache()
-	{
-		$this->getEntityManager()->clear($this->entityClass);
-	}
+    {
+        $this->getEntityManager()->clear($this->entityClass);
+    }
 
     /**
      * @return EntityRepository
