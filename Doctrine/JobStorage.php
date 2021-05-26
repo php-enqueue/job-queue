@@ -179,9 +179,12 @@ class JobStorage
         }
     }
 
-    public function clearJobCache()
+    /**
+     * @param $job
+     */
+    public function refreshedJobEntity($job)
     {
-        $this->getEntityManager()->clear($this->entityClass);
+        $this->getEntityManager()->refresh($job);
     }
 
     /**
